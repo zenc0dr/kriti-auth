@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DebugController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('auth/telegram', [App\Http\Controllers\Auth\LoginController::class, 'redirectToTelegram']);
 Route::get('auth/telegram/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleTelegramCallback']);
+Route::get('debug', [App\Http\Controllers\DebugController::class, 'test']);
