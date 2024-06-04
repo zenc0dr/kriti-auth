@@ -14,7 +14,7 @@ class LoginController extends Controller
     {
         return Socialite::driver('telegram')->redirect();
     }
-    
+
     public function handleTelegramCallback()
     {
         $telegramUser = Socialite::driver('telegram')->user();

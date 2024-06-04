@@ -35,6 +35,7 @@ return [
         'client_id' => env('TELEGRAM_CLIENT_ID'),
         'client_secret' => env('TELEGRAM_CLIENT_SECRET'),
         'redirect' => env('TELEGRAM_REDIRECT_URI'),
+        'bot_username' => env('TELEGRAM_BOT_USERNAME'),
     ],
 
 ];
