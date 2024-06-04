@@ -7,6 +7,8 @@ use Socialite;
 class DebugController extends Controller
 {
     public function test() {
-        Socialite::driver('telegram')->redirect();
+        dd(
+            Socialite::driver('telegram')->redirect();
+        );
     }
 }
