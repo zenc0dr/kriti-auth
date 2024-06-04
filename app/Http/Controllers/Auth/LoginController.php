@@ -10,22 +10,12 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    /**
-     * Перенаправление пользователя к Telegram для аутентификации.
-     *
-     * @return RedirectResponse
-     */
-    public function redirectToTelegram(): RedirectResponse
+    public function redirectToTelegram()
     {
         return Socialite::driver('telegram')->redirect();
     }
-
-    /**
-     * Обработка ответа от Telegram.
-     *
-     * @return RedirectResponse
-     */
-    public function handleTelegramCallback(): RedirectResponse
+    
+    public function handleTelegramCallback()
     {
         $telegramUser = Socialite::driver('telegram')->user();
 
