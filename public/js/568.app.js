@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkkriti=self.webpackChunkkriti||[]).push([[568],{4568:(e,n,t)=>{t.r(n),t.d(n,{default:()=>u});const r={name:"Home"};const u=(0,t(6262).A)(r,[["render",function(e,n,t,r,u,s){return null}]])}}]);

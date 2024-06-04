@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('auth/telegram', [App\Http\Controllers\Auth\LoginController::class, 'redirectToTelegram']);
+Route::get('auth/telegram/callback', [App\Http\Controllers\Auth\LoginController::class, 'handleTelegramCallback']);
