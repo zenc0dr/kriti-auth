@@ -19,18 +19,15 @@ class LoginController extends Controller
     {
         $telegramUser = Socialite::driver('telegram')->user();
 
-        // Найти или создать пользователя
         $user = User::firstOrCreate([
             'telegram_id' => $telegramUser->id,
         ], [
-            'name' => $telegramUser->nickname, // Используем nickname вместо name
-            #'email' => $telegramUser->email,   // Telegram не всегда предоставляет email, можно убрать поле, если оно необязательно
+            'name' => $telegramUser->nickname, # Используем nickname вместо name
+            'email' => $telegramUser->email ?? null,   # Telegram не всегда предоставляет email
         ]);
 
-        // Аутентифицировать пользователя
         Auth::login($user);
 
-        // Перенаправление на домашнюю страницу или другую страницу
         return redirect()->intended('/');
     }
 }
