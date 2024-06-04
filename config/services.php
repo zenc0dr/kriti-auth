@@ -33,9 +33,10 @@ return [
 
     'telegram' => [
         'client_id' => env('TELEGRAM_CLIENT_ID'),
-        'client_secret' => env('TELEGRAM_CLIENT_SECRET'),
+        'client_secret' => env('TELEGRAM_CLIENT_SECRET', 'dummy_secret_value'), // Фиктивный клиентский секрет
         'redirect' => env('TELEGRAM_REDIRECT_URI'),
-        'bot_username' => env('TELEGRAM_BOT_USERNAME'),
+        'bot_username' => env('TELEGRAM_BOT_USERNAME'),  // Добавляем имя пользователя бота
+        'bot_token' => env('TELEGRAM_CLIENT_ID'),        // Дополнительно указываем bot_token
     ],
 
 ];
