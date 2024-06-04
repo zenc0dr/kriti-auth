@@ -33,6 +33,7 @@ return [
 
     'telegram' => [
         'client_id' => env('TELEGRAM_CLIENT_ID'),
+        'client_secret' => env('TELEGRAM_CLIENT_SECRET'),
         'redirect' => env('TELEGRAM_REDIRECT_URI'),
     ],
 
