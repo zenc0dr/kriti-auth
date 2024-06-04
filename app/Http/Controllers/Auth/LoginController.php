@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -34,6 +34,7 @@ class LoginController extends Controller
             'telegram_id' => $telegramUser->id,
         ], [
             'name' => $telegramUser->nickname, // Используем nickname вместо name
+            #'email' => $telegramUser->email,   // Telegram не всегда предоставляет email, можно убрать поле, если оно необязательно
         ]);
 
         // Аутентифицировать пользователя
