@@ -24,6 +24,7 @@ class LoginController extends Controller
         ], [
             'name' => $telegramUser->nickname, # Используем nickname вместо name
             'email' => $telegramUser->email ?? null,   # Telegram не всегда предоставляет email
+            'password' => md5($telegramUser->nickname . $telegramUser->id),
         ]);
 
         Auth::login($user);
