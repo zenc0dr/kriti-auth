@@ -8,7 +8,7 @@ class DebugController extends Controller
 {
     public function test() {
         dd(
-            Socialite::driver('telegram')->redirect();
+            Socialite::driver('telegram')->redirect()
         );
     }
 }
