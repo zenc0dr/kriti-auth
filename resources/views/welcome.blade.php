@@ -13,7 +13,7 @@
 @if (auth()->check())
 <div class="welcome">
     <div class="welcome__content">
-            telegram_id: <pre>{{ Auth::user()->telegram_id }}</pre>
+            telegram_id: {{ Auth::user()->telegram_id }}
     </div>
 </div>
 @endif
