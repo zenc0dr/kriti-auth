@@ -10,5 +10,12 @@
 </head>
 <body>
 <div id="kriti-app"></div>
+<div class="welcome">
+    <div class="welcome__content">
+        @if (auth()->check())
+            telegram_id: <pre>{{ Auth::user()->telegram_id }}</pre>
+        @endif
+    </div>
+</div>
 </body>
 </html>

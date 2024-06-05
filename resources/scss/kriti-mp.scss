@@ -1,0 +1,18 @@
+.welcome {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background: #fff;
+
+    &__content {
+        display: inline-block;
+        font-size: 20px;
+        margin: auto;
+        background: #ffffff14;
+        padding: 14px 25px;
+        border-radius: 10px;
+        margin-top: 10%;
+        color: #87c5ec;
+        font-family: monospace;
+    }
+}
