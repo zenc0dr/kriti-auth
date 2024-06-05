@@ -1,1 +1,16 @@
-.welcome{background:#fff;display:flex;justify-content:center;width:100%}.welcome__content{background:hsla(0,0%,100%,.078);border-radius:10px;color:#87c5ec;display:inline-block;font-family:monospace;font-size:20px;margin:10% auto auto;padding:14px 25px}
+.welcome {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.welcome__content {
+  display: inline-block;
+  font-size: 20px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.0784313725);
+  padding: 14px 25px;
+  border-radius: 10px;
+  margin-top: 10%;
+  color: #87c5ec;
+  font-family: monospace;
+}
